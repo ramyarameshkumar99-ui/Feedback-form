@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Your Feedback | Premium Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-container">
+        <div class="form-wrapper">
+            <header>
+                <h1>Student Feedback</h1>
+                <p>Your insights help us grow. Let us know how we did!</p>
+            </header>
+            
+            <form id="feedbackForm">
+                <div class="input-group">
+                    <label for="name">Student Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="name@example.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Overall Rating</label>
+                    <div class="star-rating" id="starRating">
+                        <span class="star" data-value="5">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="1">&#9733;</span>
+                    </div>
+                    <input type="hidden" id="ratingValue" value="0">
+                </div>
+
+                <div class="input-group">
+                    <label for="experience">Overall Experience</label>
+                    <textarea id="experience" rows="4" placeholder="Tell us about your journey..." required></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn">
+                    <span>Send Feedback</span>
+                    <div class="loader" id="loader"></div>
+                </button>
+            </form>
+
+            <div id="statusMessage" class="status-message"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
